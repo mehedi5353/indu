@@ -542,6 +542,15 @@
       filter: drop-shadow(0 3px 10px rgba(219, 39, 119, 0.18));
     }
 
+    .hero-shahzadi-wish {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--velvet-deep);
+      margin: -6px auto 16px;
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
     .scroll-hint {
       margin-top: 28px;
       display: inline-flex;
@@ -881,11 +890,27 @@
       box-shadow: 0 10px 26px rgba(219, 39, 119, 0.1);
       border: 1.5px solid rgba(244, 114, 182, 0.45);
       cursor: pointer;
+      animation: gentlePolaroidSway 5.5s ease-in-out infinite;
       transition: transform 0.28s ease, box-shadow 0.28s ease;
     }
 
+    .polaroid-card:nth-child(even) {
+      animation-delay: 1.4s;
+      animation-direction: alternate-reverse;
+    }
+
+    .polaroid-card:nth-child(3n) {
+      animation-delay: 2.6s;
+    }
+
+    @keyframes gentlePolaroidSway {
+      0%, 100% { transform: rotate(-0.8deg) translateY(0px); }
+      50% { transform: rotate(0.8deg) translateY(-3px); }
+    }
+
     .polaroid-card:hover {
-      transform: translateY(-5px);
+      animation-play-state: paused;
+      transform: translateY(-5px) rotate(0deg);
       box-shadow: 0 16px 32px rgba(219, 39, 119, 0.18);
     }
 
@@ -1380,6 +1405,7 @@
       <div class="date-pill">২৬ নভেম্বর ২০২৬ 👑</div>
       <div class="hero-subtitle-en">A Celebration of Grace & Warmth</div>
       <h1 class="hero-name">Happy Birthday, INDU</h1>
+      <p class="hero-shahzadi-wish">শাহজাদী শাহী তোমার ভবিষ্যত হোক শেহজাদীর মতো🤲</p>
       <p style="font-size: 16px; max-width: 480px; margin: 0 auto; color: var(--plum-ink);">
         আজকের দিনটা শুধুই তোমার হাসি, স্বপ্ন আর রাজকীয় সুন্দর মুহূর্তগুলোর জন্য। নিচে স্ক্রল করে তোমার জন্য সাজানো প্রতিটি অধ্যায় দেখে নাও। ✨
       </p>
